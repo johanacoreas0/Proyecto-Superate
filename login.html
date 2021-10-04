@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Iniciar Sesión</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+  	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+ 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="container">
+		<br>
+		 	<div class="row">
+				<div class="col-md-6">
+					<h2>Centro ¡Supérate! Grupo Q</h2>		
+				</div>
+				<div class="col-md-6">
+					<div align="right">
+						<img src="img/logo.png" width="150">		
+					</div>
+				</div>
+			</div>
+				</header>
+				<hr class="separador">
+		 <br>
+	<div align="center">
+		<h2>Iniciar sesión</h2>
+	<form id="Form">
+		<div class="col-md-6">
+	  	<div class="form-group">
+	    	<input type="text" id="Nombre" class="form-control"  placeholder="Ingrese su Nombre" required>
+	 	</div>
+	  	<div class="form-group">
+	    	<input type="password" id="contraseña" class="form-control" placeholder="Contraseña" required>
+	  	</div>
+	  	<button tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Iniciar sesion" data-content="Presione para iniciar sesión" type="submit" class="btn btn-success">Iniciar Sesión</button>
+	</div>
+	</div>
+</form>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>
+<div class="pie">
+	<footer align="center" style="padding-top: 100px;">
+		<br>
+		Todos los derechos reservados
+	</footer>
+	</div>
+
+<script src="popover.js"></script>
+<script type="text/javascript">
+
+document.getElementById('Form').addEventListener('submit', function (e) {
+	var usuario = document.getElementById('Nombre');
+	var contraseña = document.getElementById('contraseña');
+
+	localStorage.setItem('Nombre', usuario);
+	localStorage.setItem('Nombre', contraseña);
+	window.location = 'index.html';
+
+	e.preventDefault();
+
+});
+
+</script>
+</body>
+</html>

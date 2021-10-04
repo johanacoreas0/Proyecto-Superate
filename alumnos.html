@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Alumnos</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+  	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+ 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+		<br>
+			<div class="row">
+				<div class="col-md-6">
+					<h2>Alumnos</h2>	
+				</div>
+				<div class="col-md-6">
+					<div align="right">
+						<img src="img/logo.png" width="150">		
+					</div>
+				</div>
+			</div>
+		<div class="row">
+			<div class="col-md-12" align="center">
+				<header>
+					<nav>
+						<a href="index.html"><input type="button" name="Inicio" value="Inicio" class="boton"></a>|
+						<a href="requisitos.html"><input type="button" name="Requisitos" value="Requisitos" class="boton"></a>|
+						<a href="formulario.html"><input type="button" name="Formulario" value="Formulario" class="boton"></a>|
+						<a href="alumnos.html"><input type="button" name="Alumnos" value="Alumnos" class="boton"></a>
+					</nav>
+				</header>
+				<hr class="separador">
+			</div>
+		</div>
+	<br>
+<div class="table table-responsive">
+  <div class="row">
+    <div class="col-12">
+<table class="table table-bordered table table-hover">
+	  <thead>
+	    <tr>
+	      <th>ID</th>
+	      <th>Nombre</th>
+	      <th>Apellido</th>
+	      <th>Edad</th>
+	      <th>Dirección</th>
+	      <th>Telefono</th>
+	      <th>Centro Escolar</th>
+	      <th>Acciones</th>
+	    </tr>
+	  </thead>
+
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>Maria</td>
+      <td>Rivas</td>
+      <td>16</td>
+      <td>Colonia España</td>
+      <td>72791728</td>
+      <td>Centro Escolar Herbert De Sola</td>
+      <td><button type="button" data-toggle="modal" data-target="#modal1" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Modificar datos" class="btn btn-outline-success"  >Modificar</button></td>
+    	<div class="modal fade" id="modal1">
+    		<div class="modal-dialog">
+    			<div class="modal-content">
+    				<div class="modal-header">
+    					<h2 class="modal-title">Modificar los datos de maría</h2>
+    					<button  type="button" class="close" data-dismiss="modal" aria-label="Close" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Cerrar">&times;</button>
+    				</div>
+    				<div class="modal-body">
+    					<input type="number" name="ID" placeholder="ID"  class="form-control" value="1">
+	    				<input type="text" name="nombre" placeholder="Nombre"  class="form-control" value="Maria">
+	    				<input type="text" name="apellido" placeholder="Apellido"  class="form-control" value="Rivas">
+	    				<input type="number" name="edad" placeholder="Edad"  class="form-control" value="16">
+	    				<input type="text" name="direccion" placeholder="Dirección"  class="form-control" value="Colonia España">
+	    				<input type="number" name="tel" placeholder="Telefono" class="form-control" value="72791728">
+	    				<input type="text" name="Centro Escolar" placeholder="Centro Escolar" class="form-control" value="Centro escolar herbert de sola">
+	    			</div>
+	    			<div class="modal-footer">
+	    				<button type="button" class="btn btn-outline-success" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Guardar datos">Guardar datos</button>
+	    				<button type="button" class="btn btn-outline-primary" data-dismiss="modal" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Cancelar">Cancelar</button>				
+	    			</div>
+    			</div>    			
+    		</div>
+    	</div>
+    <td>
+      <button type="button" data-toggle="modal" data-target="#modal2" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Eliminar datos" class="btn btn-outline-success">Eliminar</button></td>
+      <div class="modal fade" id="modal2">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title">Eliminar los datos de este estudiante</h2>
+              <button  type="button" class="close" data-dismiss="modal" aria-label="Close" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Cerrar">&times;</button>
+            </div>
+            <div class="modal-body">
+              <p>¿Está seguro que quiere eliminar estos datos?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-success" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Eliminar datos">Eliminar datos</button>
+              <button type="button" class="btn btn-outline-primary" data-dismiss="modal" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Cancelar">Cancelar</button>   
+            </div>
+          </div>
+        </div>
+      </div>
+    </tr>
+  <tr>
+      <th>2</th>
+      <td>Alam</td>
+      <td>Segobia</td>
+      <td>16</td>
+      <td>Cuidad Real</td>
+      <td>72776060</td>
+      <td>Centro Escolar Niño Jesus de Praga</td>
+      <td><button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#modal2" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Modificar datos">Modificar</button></td>
+    	<div class="modal fade" id="modal2">
+    		<div class="modal-dialog">
+    			<div class="modal-content">
+    				<div class="modal-header">
+    					<h2 class="modal-title">Modificar los datos de Alam</h2>
+    					<button  type="button" class="close" data-dismiss="modal" aria-label="Close"tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Cerrar">&times;</button>
+    				</div>
+    				<div class="modal-body">
+    					<input type="number" name="ID" placeholder="ID"  class="form-control" value="2">
+	    				<input type="text" name="nombre" placeholder="Nombre"  class="form-control"  value="Alam">
+	    				<input type="text" name="apellido" placeholder="Apellido"  class="form-control" value="Segobia">
+	    				<input type="number" name="edad" placeholder="Edad"  class="form-control" value="16">
+	    				<input type="text" name="direccion" placeholder="Dirección"  class="form-control" value="Ciudad Real">
+	    				<input type="number" name="tel" placeholder="Telefono" class="form-control" value="72776060">
+	    				<input type="text" name="Centro Escolar" placeholder="Centro Escolar" class="form-control" value="Centro Escolar Niño Jesus de Praga">
+	    			</div>
+	    			<div class="modal-footer">
+	    				<button type="button" class="btn btn-outline-success" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Guardar datos">Guardar datos</button>
+	    			  <button type="button" class="btn btn-outline-primary" data-dismiss="modal" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Cancelar">Cancelar</button>       
+            </div>
+          </div>          
+        </div>
+      </div>
+    <td>
+      <button type="button" data-toggle="modal" data-target="#modal2" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Eliminar datos" class="btn btn-outline-success">Eliminar</button></td>
+      <div class="modal fade" id="modal2">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title">Eliminar los datos de este estudiante</h2>
+              <button  type="button" class="close" data-dismiss="modal" aria-label="Close" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Cerrar">&times;</button>
+            </div>
+            <div class="modal-body">
+              <p>¿Está seguro que quiere eliminar estos datos?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-success" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Eliminar datos">Eliminar datos</button>
+              <button type="button" class="btn btn-outline-primary" data-dismiss="modal" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Cancelar">Cancelar</button>   
+            </div>
+          </div>
+        </div>
+      </div>
+    	</div>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Raúl</td>
+      <td>Alvarez</td>
+      <td>17</td>
+      <td>Colonia Mitchel</td>
+      <td>71791218</td>
+      <td>Complejo educativo confederacion suiza</td>
+      <td><button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#modal3" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Modificar datos">Modificar</button></td>
+    	<div class="modal fade" id="modal3">
+    		<div class="modal-dialog">
+    			<div class="modal-content">
+    				<div class="modal-header">
+    					<h2 class="modal-title">Modificar los datos de raúl</h2>
+    					<button  type="button" class="close" data-dismiss="modal" aria-label="Close"tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Cerrar">&times;</button>
+    				</div>
+    				<div class="modal-body">
+    					<input type="number" name="ID" placeholder="ID"  class="form-control" value="3">
+	    				<input type="text" name="nombre" placeholder="Nombre"  class="form-control" value="Raúl">
+	    				<input type="text" name="apellido" placeholder="Apellido"  class="form-control" value="Alvarez">
+	    				<input type="number" name="edad" placeholder="Edad"  class="form-control" value="17">
+	    				<input type="text" name="direccion" placeholder="Dirección"  class="form-control" value="Colonia Mitchel">
+	    				<input type="number" name="tel" placeholder="Telefono" class="form-control" value="71791218">
+	    				<input type="text" name="Centro Escolar" placeholder="Centro Escolar" class="form-control" value="complejo educativo confederacion suiza">
+	    			</div>
+	    			<div class="modal-footer">
+	    				<button type="button" class="btn btn-outline-success" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Guardar datos">Guardar datos</button>
+            <button type="button" class="btn btn-outline-primary" data-dismiss="modal" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Cancelar">Cancelar</button>       
+            </div>
+          </div>          
+        </div>
+      </div>
+    <td>
+      <button type="button" data-toggle="modal" data-target="#modal2" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Eliminar datos" class="btn btn-outline-success">Eliminar</button></td>
+      <div class="modal fade" id="modal2">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title">Eliminar los datos de este estudiante</h2>
+              <button  type="button" class="close" data-dismiss="modal" aria-label="Close" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Cerrar">&times;</button>
+            </div>
+            <div class="modal-body">
+              <p>¿Está seguro que quiere eliminar estos datos?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-success" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Eliminar datos">Eliminar datos</button>
+              <button type="button" class="btn btn-outline-primary" data-dismiss="modal" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Cancelar">Cancelar</button>   
+            </div>
+          </div>
+        </div>
+      </div>
+    </tr>
+	<tr>
+      <th>4</th>
+      <td>Renato</td>
+      <td>Perez</td>
+      <td>17</td>
+      <td>Ciudad Real</td>
+      <td>76902731</td>
+      <td>Dolores rete</td>
+      <td><button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#modal4"tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Cerrar">Modificar</button></td>
+    	<div class="modal fade" id="modal4">
+    		<div class="modal-dialog">
+    			<div class="modal-content">
+    				<div class="modal-header">
+    					<h2 class="modal-title">Modificar los datos de renato</h2>
+    					<button  type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
+    				</div>
+    				<div class="modal-body">
+    					<input type="number" name="ID" placeholder="ID"  class="form-control" value="4">
+	    				<input type="text" name="nombre" placeholder="Nombre"  class="form-control" value="Renato">
+	    				<input type="text" name="apellido" placeholder="Apellido"  class="form-control" value="Perez">
+	    				<input type="number" name="edad" placeholder="Edad"  class="form-control" value="17">
+	    				<input type="text" name="direccion" placeholder="Dirección"  class="form-control" value="Ciudad Real">
+	    				<input type="number" name="tel" placeholder="Telefono" class="form-control" value="76902731">
+	    				<input type="text" name="Centro Escolar" placeholder="Centro Escolar" class="form-control" value="Dolores Rete">
+	    			</div>
+	    			<div class="modal-footer">
+	    				<button type="button" class="btn btn-outline-success" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Guardar datos">Guardar datos</button>
+	    			  <button type="button" class="btn btn-outline-primary" data-dismiss="modal" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Cancelar">Cancelar</button>       
+            </div>
+          </div>          
+        </div>
+      </div>
+    <td>
+      <button type="button" data-toggle="modal" data-target="#modal2" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Eliminar datos" class="btn btn-outline-success">Eliminar</button></td>
+      <div class="modal fade" id="modal2">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title">Eliminar los datos de este estudiante</h2>
+              <button  type="button" class="close" data-dismiss="modal" aria-label="Close" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Cerrar">&times;</button>
+            </div>
+            <div class="modal-body">
+              <p>¿Está seguro que quiere eliminar estos datos?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-success" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Eliminar datos">Eliminar datos</button>
+              <button type="button" class="btn btn-outline-primary" data-dismiss="modal" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Cancelar">Cancelar</button>   
+            </div>
+          </div>
+        </div>
+      </div>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Sara</td>
+      <td>Reyes</td>
+      <td>15</td>
+      <td>Colonia Aurora</td>
+      <td>72662200</td>
+      <td>Complejo educativo Ofelia Herrera </td>
+      <td><button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#modal5" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Modificar datos" >Modificar</button></td>
+    	<div class="modal fade" id="modal5">
+    		<div class="modal-dialog">
+    			<div class="modal-content">
+    				<div class="modal-header">
+    					<h2 class="modal-title">Modificar los datos de sara</h2>
+    					<button  type="button" class="close" data-dismiss="modal" aria-label="Close"tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Cerrar">&times;</button>
+    				</div>
+    				<div class="modal-body">
+    					<input type="number" name="ID" placeholder="ID"  class="form-control" value="5">
+	    				<input type="text" name="nombre" placeholder="Nombre"  class="form-control" value="Sara">
+	    				<input type="text" name="apellido" placeholder="Apellido"  class="form-control" value="Reyes">
+	    				<input type="number" name="edad" placeholder="Edad"  class="form-control" value="15">
+	    				<input type="text" name="direccion" placeholder="Dirección"  class="form-control" value="Colonia Aurora">
+	    				<input type="number" name="tel" placeholder="Telefono" class="form-control" value="72662200">
+	    				<input type="text" name="Centro Escolar" placeholder="Centro Escolar" class="form-control" value="Complejo educativo Ofelia Herrera">
+	    			</div>
+	    			<div class="modal-footer">
+	    				<button type="button" class="btn btn-outline-success" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Guardar datos">Guardar datos</button>
+	    				<button type="button" class="btn btn-outline-primary" data-dismiss="modal" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Cancelar">Cancelar</button>       
+            </div>
+          </div>          
+        </div>
+      </div>
+    <td>
+      <button type="button" data-toggle="modal" data-target="#modal2" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Eliminar datos" class="btn btn-outline-success">Eliminar</button></td>
+      <div class="modal fade" id="modal2">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title">Eliminar los datos de este estudiante</h2>
+              <button  type="button" class="close" data-dismiss="modal" aria-label="Close" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Cerrar">&times;</button>
+            </div>
+            <div class="modal-body">
+              <p>¿Está seguro que quiere eliminar estos datos?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-success" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Eliminar datos">Eliminar datos</button>
+              <button type="button" class="btn btn-outline-primary" data-dismiss="modal" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Cancelar">Cancelar</button>   
+            </div>
+          </div>
+        </div>
+      </div>
+    </tr>
+	<tr>
+      <th>6</th>
+      <td>Gustabo</td>
+      <td>García</td>
+      <td>17</td>
+      <td>Ciudad Real</td>
+      <td>76121920</td>
+      <td>Centro Escolar la confianza</td>
+      <td><button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#modal6" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Modificar datos" >Modificar</button></td>
+    	<div class="modal fade" id="modal6">
+    		<div class="modal-dialog">
+    			<div class="modal-content">
+    				<div class="modal-header">
+    					<h2 class="modal-title">Modificar los datos de gustabo</h2>
+    					<button  type="button" class="close" data-dismiss="modal" aria-label="Close"tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Cerrar">&times;</button>
+    				</div>
+    				<div class="modal-body">
+    					<input type="number" name="ID" placeholder="ID"  class="form-control" value="6">
+	    				<input type="text" name="nombre" placeholder="Nombre"  class="form-control" value="Gustabo">
+	    				<input type="text" name="apellido" placeholder="Apellido"  class="form-control" value="García">
+	    				<input type="number" name="edad" placeholder="Edad"  class="form-control" value="17">
+	    				<input type="text" name="direccion" placeholder="Dirección"  class="form-control" value="Ciudad Real">
+	    				<input type="number" name="tel" placeholder="Telefono" class="form-control" value="76121920">
+	    				<input type="text" name="Centro Escolar" placeholder="Centro Escolar" class="form-control" value="Centro Escolar la confianza">
+	    			</div>
+	    			<div class="modal-footer">
+	    				<button type="button" class="btn btn-outline-success" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Guardar datos">Guardar datos</button>
+	    				<button type="button" class="btn btn-outline-primary" data-dismiss="modal" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Cancelar">Cancelar</button>       
+            </div>
+          </div>          
+        </div>
+      </div>
+    <td>
+      <button type="button" data-toggle="modal" data-target="#modal2" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Eliminar datos" class="btn btn-outline-success">Eliminar</button></td>
+      <div class="modal fade" id="modal2">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title">Eliminar los datos de este estudiante</h2>
+              <button  type="button" class="close" data-dismiss="modal" aria-label="Close" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Cerrar">&times;</button>
+            </div>
+            <div class="modal-body">
+              <p>¿Está seguro que quiere eliminar estos datos?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-success" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Eliminar datos">Eliminar datos</button>
+              <button type="button" class="btn btn-outline-primary" data-dismiss="modal" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Cancelar">Cancelar</button>   
+            </div>
+          </div>
+        </div>
+      </div>
+    </tr>
+	<tr>
+      <th>7</th>
+      <td>Karla</td>
+      <td>Coreas</td>
+      <td>18</td>
+      <td>Ciudad Real</td>
+      <td>76902131</td>
+      <td>Dolores rete</td>
+      <td><button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#modal7" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Modificar datos" >Modificar</button></td>
+    	<div class="modal fade" id="modal7">
+    		<div class="modal-dialog">
+    			<div class="modal-content">
+    				<div class="modal-header">
+    					<h2 class="modal-title">Modificar los datos de karla</h2>
+    					<button  type="button" class="close" data-dismiss="modal" aria-label="Close"tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Cerrar">&times;</button>
+    				</div>
+    				<div class="modal-body">
+    					<input type="number" name="ID" placeholder="ID"  class="form-control" value="7">
+	    				<input type="text" name="nombre" placeholder="Nombre"  class="form-control" value="Karla">
+	    				<input type="text" name="apellido" placeholder="Apellido"  class="form-control" value="Coreas">
+	    				<input type="number" name="edad" placeholder="Edad"  class="form-control" value="18">
+	    				<input type="text" name="direccion" placeholder="Dirección"  class="form-control" value="Ciudad Real">
+	    				<input type="number" name="tel" placeholder="Telefono" class="form-control" value="76902131">
+	    				<input type="text" name="Centro Escolar" placeholder="Centro Escolar" class="form-control" value="Dolores Rete">
+	    			</div>
+	    			<div class="modal-footer">
+	    				<button type="button" class="btn btn-outline-success" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Guardar datos">Guardar datos</button>
+	    			<button type="button" class="btn btn-outline-primary" data-dismiss="modal" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Cancelar">Cancelar</button>       
+            </div>
+          </div>          
+        </div>
+      </div>
+    <td>
+      <button type="button" data-toggle="modal" data-target="#modal2" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Eliminar datos" class="btn btn-outline-success">Eliminar</button></td>
+      <div class="modal fade" id="modal2">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title">Eliminar los datos de este estudiante</h2>
+              <button  type="button" class="close" data-dismiss="modal" aria-label="Close" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Cerrar">&times;</button>
+            </div>
+            <div class="modal-body">
+              <p>¿Está seguro que quiere eliminar estos datos?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-success" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Eliminar datos">Eliminar datos</button>
+              <button type="button" class="btn btn-outline-primary" data-dismiss="modal" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Cancelar">Cancelar</button>   
+            </div>
+          </div>
+        </div>
+      </div>
+    </tr>
+	<tr>
+      <th>8</th>
+      <td>Manolo</td>
+      <td>Fernandez</td>
+      <td>17</td>
+      <td>Los naranjos</td>
+      <td>89276109</td>
+      <td>Centro escolar la confianza</td>
+      <td><button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#modal8" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Modificar datos" >Modificar</button></td>
+    	<div class="modal fade" id="modal8">
+    		<div class="modal-dialog">
+    			<div class="modal-content">
+    				<div class="modal-header">
+    					<h2 class="modal-title">Modificar los datos de renato</h2>
+    					<button  type="button" class="close" data-dismiss="modal" aria-label="Close"tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Cerrar">&times;</button>
+    				</div>
+    				<div class="modal-body">
+    					<input type="number" name="ID" placeholder="ID"  class="form-control" value="8">
+	    				<input type="text" name="nombre" placeholder="Nombre"  class="form-control" value="Manolo">
+	    				<input type="text" name="apellido" placeholder="Apellido"  class="form-control" value="Fernandez">
+	    				<input type="number" name="edad" placeholder="Edad"  class="form-control" value="17">
+	    				<input type="text" name="direccion" placeholder="Dirección"  class="form-control" value="Los naranjos">
+	    				<input type="number" name="tel" placeholder="Telefono" class="form-control" value="89276109">
+	    				<input type="text" name="Centro Escolar" placeholder="Centro Escolar" class="form-control" value="Centro Escolar la confianza">
+	    			</div>
+	    			<div class="modal-footer">
+	    				<button type="button" class="btn btn-outline-success" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Guardar datos">Guardar datos</button>
+	    				<button type="button" class="btn btn-outline-primary" data-dismiss="modal" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Cancelar">Cancelar</button>       
+            </div>
+          </div>          
+        </div>
+      </div>
+    <td>
+      <button type="button" data-toggle="modal" data-target="#modal2" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Eliminar datos" class="btn btn-outline-success">Eliminar</button></td>
+      <div class="modal fade" id="modal2">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title">Eliminar los datos de este estudiante</h2>
+              <button  type="button" class="close" data-dismiss="modal" aria-label="Close" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Cerrar">&times;</button>
+            </div>
+            <div class="modal-body">
+              <p>¿Está seguro que quiere eliminar estos datos?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-success" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Eliminar datos">Eliminar datos</button>
+              <button type="button" class="btn btn-outline-primary" data-dismiss="modal" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Cancelar">Cancelar</button>   
+            </div>
+          </div>
+        </div>
+      </div>
+  	</tr>
+	<tr>
+      <th>9</th>
+      <td>Violeta</td>
+      <td>Perez</td>
+      <td>17</td>
+      <td>Colonia Aurora</td>
+      <td>76902189</td>
+      <td>Dolores rete</td>
+      <td><button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#modal9" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Modificar datos">Modificar</button></td>
+    	<div class="modal fade" id="modal9">
+    		<div class="modal-dialog">
+    			<div class="modal-content">
+    				<div class="modal-header">
+    					<h2 class="modal-title">Modificar los datos de violeta</h2>
+    					<button  type="button" class="close" data-dismiss="modal" aria-label="Close"tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Cerrar">&times;</button>
+    				</div>
+    				<div class="modal-body">
+    					<input type="number" name="ID" placeholder="ID"  class="form-control" value="9">
+	    				<input type="text" name="nombre" placeholder="Nombre"  class="form-control" value="Violeta">
+	    				<input type="text" name="apellido" placeholder="Apellido"  class="form-control" value="Perez">
+	    				<input type="number" name="edad" placeholder="Edad"  class="form-control" value="17">
+	    				<input type="text" name="direccion" placeholder="Dirección"  class="form-control" value="Colonia Aurora">
+	    				<input type="number" name="tel" placeholder="Telefono" class="form-control" value="76902189">
+	    				<input type="text" name="Centro Escolar" placeholder="Centro Escolar" class="form-control" value="Dolores Rete">
+	    			</div>
+	    			<div class="modal-footer">
+	    				<button type="button" class="btn btn-outline-success" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Guardar datos">Guardar datos</button>
+	    				<button type="button" class="btn btn-outline-primary" data-dismiss="modal" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Cancelar">Cancelar</button>       
+            </div>
+          </div>          
+        </div>
+      </div>
+    <td>
+      <button type="button" data-toggle="modal" data-target="#modal2" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Eliminar datos" class="btn btn-outline-success">Eliminar</button></td>
+      <div class="modal fade" id="modal2">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title">Eliminar los datos de este estudiante</h2>
+              <button  type="button" class="close" data-dismiss="modal" aria-label="Close" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Cerrar">&times;</button>
+            </div>
+            <div class="modal-body">
+              <p>¿Está seguro que quiere eliminar estos datos?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-success" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Eliminar datos">Eliminar datos</button>
+              <button type="button" class="btn btn-outline-primary" data-dismiss="modal" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Cancelar">Cancelar</button>   
+            </div>
+          </div>
+        </div>
+      </div>
+    </tr>
+	<tr>
+      <th>10</th>
+      <td>Josue</td>
+      <td>Hernandez</td>
+      <td>18</td>
+      <td>Ciudad Real</td>
+      <td>72902711</td>
+      <td>Dolores rete</td>
+      <td><button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#modal10" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Modificar datos">Modificar</button></td>
+    	<div class="modal fade" id="modal10">
+    		<div class="modal-dialog">
+    			<div class="modal-content">
+    				<div class="modal-header">
+    					<h2 class="modal-title">Modificar los datos de josue</h2>
+    					<button  type="button" class="close" data-dismiss="modal" aria-label="Close"tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Cerrar">&times;</button>
+    				</div>
+    				<div class="modal-body">
+    					<input type="number" name="ID" placeholder="ID"  class="form-control" value="10">
+	    				<input type="text" name="nombre" placeholder="Nombre"  class="form-control" value="Josue">
+	    				<input type="text" name="apellido" placeholder="Apellido"  class="form-control" value="Hernandez">
+	    				<input type="number" name="edad" placeholder="Edad"  class="form-control" value="18">
+	    				<input type="text" name="direccion" placeholder="Dirección"  class="form-control" value="Ciudad Real">
+	    				<input type="number" name="tel" placeholder="Telefono" class="form-control" value="72902711">
+	    				<input type="text" name="Centro Escolar" placeholder="Centro Escolar" class="form-control" value="Dolores Rete">
+	    			</div>
+	    			<div class="modal-footer">
+	    				<button type="button" class="btn btn-outline-success" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Guardar datos">Guardar datos</button>
+              <button type="button" class="btn btn-outline-primary" data-dismiss="modal" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Cancelar">Cancelar</button>       
+            </div>
+          </div>          
+        </div>
+      </div>
+    <td>
+      <button type="button" data-toggle="modal" data-target="#modal2" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Eliminar datos" class="btn btn-outline-success">Eliminar</button></td>
+      <div class="modal fade" id="modal2">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title">Eliminar los datos de este estudiante</h2>
+              <button  type="button" class="close" data-dismiss="modal" aria-label="Close" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Cerrar">&times;</button>
+            </div>
+            <div class="modal-body">
+              <p>¿Está seguro que quiere eliminar estos datos?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-success" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Eliminar datos">Eliminar datos</button>
+              <button type="button" class="btn btn-outline-primary" data-dismiss="modal" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Cancelar">Cancelar</button>   
+            </div>
+          </div>
+        </div>
+      </div>
+    </tr>
+</tbody>
+</table>
+
+</div>
+</div></div></div></div>
+
+<div class="pie">
+	<footer align="center">
+		<br>
+		Todos los derechos reservados
+		<br>
+	</footer>
+	</div>
+<script src="popover.js"></script>
+</body>
+</html>

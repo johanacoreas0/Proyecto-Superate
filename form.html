@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulario de ingreso</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+  	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+ 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+		function validar(){
+			var form = document.form;
+
+			if (form.nombre.value==0) {
+				alert("El campo nombre esta vacío")
+				form.nombre.value="";
+				form.nombre.focus();
+				return false;
+			}
+
+			if (form.cantidad.value==0) {
+				alert("El campo cantidad esta vacío")
+				form.cantidad.value="";
+				form.cantidad.focus();
+				return false;
+			}
+
+			if (form.codigo.value==0) {
+				alert("El campo codigo esta vacío")
+				form.codigo.value="";
+				form.codigo.focus();
+				return false;
+			}
+
+			if (form.precio.value==0) {
+				alert("El campo precio esta vacío")
+				form.precio.value="";
+				form.precio.focus();
+				return false;
+			}
+
+	</script>
+</head>
+<body>
+	<div class="container">
+		<br>
+<form name="form" action="#" method="POST" onsubmit="return validar()">
+<div class="row">
+	<div class="col-6">
+			<div class="form-group">
+		    	<label>Nombre del producto</label>
+		    	<input type="text" class="form-control" style="width: 200px" id="nombre" placeholder="nombre">
+		    </div>
+		    <div class="form-group">
+		    	<label>Cantidad</label>
+		    	<input type="text" class="form-control" style="width: 150px" id="cantidad" placeholder="cantidad">
+		    </div>
+		    <div class="form-group">
+		    	<label>Código</label>
+		    	<input type="text" class="form-control" style="width: 150px" id="codigo" placeholder="codigo">
+		    </div>
+		    <div class="form-group">
+		    	<label>Precio</label>
+		    	<input type="text" class="form-control" style="width: 150px" id="precio" placeholder="precio">
+		    </div>
+ 				<button class="btn btn-outline-secondary" type="submit" onclick="validar()">Enviar</button>	
+ 		</div>
+</form>
+</div>
+
+</body>
+</html>

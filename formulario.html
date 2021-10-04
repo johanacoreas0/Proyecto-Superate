@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulario de ingreso</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+  	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+ 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		function validar(){
+			var form = document.form;
+
+			if (form.nombre.value==0) {
+				alert("El campo nombre esta vacío")
+				form.nombre.value="";
+				form.nombre.focus();
+				return false;
+			}
+
+			if (form.nacimiento.value==0) {
+				alert("El campo nacimiento esta vacío")
+				form.nacimiento.value="";
+				form.nacimiento.focus();
+				return false;
+			}
+
+			if (form.edad .value==0) {
+				alert("El campo edad esta vacío")
+				form.edad .value="";
+				form.edad .focus();
+				return false;
+			}
+
+			if (form.tel.value==0) {
+				alert("El campo tel esta vacío")
+				form.tel.value="";
+				form.tel.focus();
+				return false;
+			}
+
+			if (form.nombremadre.value==0) {
+				alert("El campo nombre de la madre esta vacío")
+				form.nombremadre.value="";
+				form.nombremadre.focus();
+				return false;
+			}
+
+			if (form.nombrepadre.value==0) {
+				alert("El campo nombre del padre esta vacío")
+				form.nombrepadre.value="";
+				form.nombrepadre.focus();
+				return false;
+			}
+
+			if (form.direccion.value==0) {
+				alert("El campo direccion esta vacío")
+				form.direccion.value="";
+				form.direccion.focus();
+				return false;
+			}
+
+			if (form.escuela.value==0) {
+				alert("El campo escuela esta vacío")
+				form.escuela.value="";
+				form.escuela.focus();
+				return false;
+			}
+
+			if (form.grado.value==0) {
+				alert("El campo grado esta vacío")
+				form.grado.value="";
+				form.grado.focus();
+				return false;
+			}
+
+			if (form.numnombre.value==0) {
+				alert("El campo nombre y numero de encargado esta vacío")
+				form.numnombre.value="";
+				form.numnombre.focus();
+				return false;
+			}
+
+			if (form.respuestauno.value==0) {
+				alert("El campo de la respuesta 1 de la parte 2 esta vacío")
+				form.respuestauno.value="";
+				form.respuestauno.focus();
+				return false;
+			}			
+
+			if (form.respuestados.value==0) {
+				alert("El campo de la respuesta 1 de la parte 2 está vacío")
+				form.respuestados.value="";
+				form.respuestados.focus();
+				return false;
+			}
+
+			if (form.describe.value==0) {
+				alert("El campo de la respuesta 2 de la parte 2 está vacío")
+				form.describe.value="";
+				form.describe.focus();
+				return false;
+			}
+
+			if (form.relato.value==0) {
+				alert("El campo de la respuesta 3 de la parte 2 está vacío")
+				form.relato.value="";
+				form.relato.focus();
+				return false;
+			}
+
+			if (form.beca.value==0) {
+				alert("El campo de la respuesta 4 de la parte 2 está vacío")
+				form.beca.value="";
+				form.beca.focus();
+				return false;
+			}
+			 
+		}
+	</script>
+</head>
+<body>
+	<div class="container">
+		<br>
+			<div class="row">
+				<div class="col-md-6">
+					<h2>Formulario de contacto</h2>
+					<h2>Centro ¡Supérate! Grupo Q</h2>		
+				</div>
+				<div class="col-md-6">
+					<div align="right">
+						<img src="img/logo.png" width="150">		
+					</div>
+				</div>
+			</div>
+		<div class="row">
+			<div class="col-md-12" align="center">
+				<header>
+					<nav>
+						<a href="index.html"><input type="button" name="Inicio" value="Inicio" class="boton"></a>|
+						<a href="requisitos.html"><input type="button" name="Requisitos" value="Requisitos" class="boton"></a>|
+						<a href="formulario.html"><input type="button" name="Formulario" value="Formulario" class="boton"></a>|
+						<a href="alumnos.html"><input type="button" name="Alumnos" value="Alumnos" class="boton"></a>
+					</nav>
+				</header>
+				<hr class="separador">
+			</div>
+		</div>
+	<br>
+<form name="form" action="#" method="POST" onsubmit="return validar()">
+<div class="row">
+	<div class="col-6">
+    	<p class="texto">1. DATOS GENERALES DEL JOVEN O LA JOVEN ASPIRANTES</p>
+    	<div class="form-row">
+    		<div class="input-group mb-3">
+  				<div class="input-group-prepend">
+  					<span class="input-group-text" id="inputGroup-sizing-default">Nombre Completo</span>
+  				</div>
+  				<input type="text" class="form-control" id="nombre" placeholder="Nombre Completo">
+			</div>
+    	</div>
+		<div class="form-row">
+		    <div class="col">
+		    	<span>Fecha de nacimiento</span>
+		    	<input type="date" class="form-control" style="width: 200px" id="nacimiento" placeholder="Fecha de nacimiento" >
+		    </div>
+		    <div class="col">
+		    	<span>Edad del aplicante</span>
+		    	<input type="number" class="form-control" style="width: 150px" id="edad" placeholder="Edad">
+		    </div>
+		    <div class="col">
+		    	<span>Telefono de Contacto</span>
+		    	<input type="number" class="form-control" style="width: 150px" id="tel" placeholder="Telefono">
+		    </div>
+		</div>
+		<br>
+		<div class="form-row">
+    		<div class="input-group mb-3">
+  				<div class="input-group-prepend">
+  					<span class="input-group-text" id="inputGroup-sizing-default">Nombre de la Madre</span>
+  				</div>
+  				<input type="text" class="form-control" id="nombremadre" placeholder="Nombre de la madre">
+			</div>
+    	</div>
+    	<div class="form-row">
+    		<div class="input-group mb-3">
+  				<div class="input-group-prepend">
+  					<span class="input-group-text" id="inputGroup-sizing-default">Nombre del Padre</span>
+  				</div>
+  				<input type="text" class="form-control" id="nombrepadre" placeholder="Nombre del Padre">
+			</div>
+    	</div>
+    	<div class="form-group">
+    		<label for="exampleFormControlTextarea1">Dirección de la casa</label>
+    		<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" id="direccion" placeholder="Dirección de su casa"></textarea>
+ 		</div>
+ 		<div class="form-group row">
+    		<label class="col-sm-2 col-form-label">Centro Escolar: </label>
+    		<div class="col-sm-10">
+      			<input type="text" class="form-control" id="escuela" placeholder="Centro Escolar">
+    		</div>
+  		</div>
+  		<div class="form-group row">
+  			<label class="col-sm-2 col-form-label">Grado</label>
+  			<input type="number" class="form-control" style="width: 150px" id="grado" placeholder="Grado">
+  		</div>
+  		<div class="form-group row">
+  			<div class="form-group col">
+		  		<div class="form-check form-check-inline">
+		  			<label>Turno CE </label>
+	  				<input class="form-check-input" type="radio" name="inlineRadioOptions" id="mañana" value="option1">
+	  				<label class="form-check-label" for="mañana">M</label>
+				</div>
+				<div class="form-check form-check-inline">
+	  				<input class="form-check-input" type="radio" name="inlineRadioOptions" id="tarde" value="option2">
+	  				<label class="form-check-label" for="tarde">T</label>
+				</div>
+			</div>
+		</div>
+		<div class="form-group row">
+			<div class="form-group col">
+    				<label class="col-sm-6 col-form-label">Numéro y nombre del encargado</label>
+    				<textarea class="form-control" id="numnombre" placeholder="Numéro y nombre del encargado"></textarea>
+ 			</div>
+ 		</div>
+		<div class="form-group row">
+			<div class="form-group col">
+		  		<label class="col-sm-6 col-form-label">¿Tiene algún proceso pendiente en el extrangero?</label>
+		  			<div>
+		  				<input type="radio" id="residencia">
+		  				<label> Residencia</label>			
+		  			</div>
+					<div>
+		  				<input type="radio" id="ciudadania">
+		  				<label> Ciudadanía</label>
+					</div>
+					<div>
+		  				<input type="radio" id="tierra">
+		  				<label> Viaje por tierra</label>
+					</div>
+					<div>
+		  				<input type="radio" id="ninguno">
+		  				<label> Ninguno</label>
+					</div>
+				</div>
+		</div>
+		<br>
+	</div>
+	<div class="col-6">
+		<p class="texto">2. MOTIVACIÓN PARA APLICAR A LA BECA.</p>
+		<div class="form-group">
+    		<label>1- Escriba dos razones por las cuales le gustaría que le otorgaran una beca ¡Supérate!</label>
+    		<div class="input-group">
+    			<div class="input-group-prepend">
+    				<span class="input-group-text">1.</span>
+  				</div>
+    			<textarea class="form-control" name="respuestauno" placeholder="Escriba aquí su respuesta"></textarea>
+    		</div>
+    		<br>
+    		<div class="input-group">
+    			<div class="input-group-prepend">
+    				<span class="input-group-text">2.</span>
+  				</div>
+    			<textarea class="form-control" name="respuestados" placeholder="Escriba aquí su respuesta"></textarea>
+    		</div>
+  		</div>
+  		<div class="form-group row">
+    		<label class="col-sm-12 col-form-label">2- ¿Cómo te describen tus familiares, amigos y compañeros de clase?</label>
+    		<textarea class="form-control" rows="3" id="describe" placeholder="Escriba aquí su respuesta"></textarea>
+ 		</div>
+ 		<div class="form-group row">
+    		<label class="col-sm-12 col-form-label">3- Escribe un breve relato sobre tu rutina diaria y también la de el grupo familiar con el que convives (Incluye nombres). Cuentanos sobre tu día a día.</label>
+    		<textarea class="form-control" rows="3" id="relato" placeholder="Escriba aquí su respuesta"></textarea>
+ 		</div>
+ 		<div class="form-group row">
+    		<label class="col-sm-12 col-form-label">4- Esta beca exige compromiso y que sea estudiante de un tiempo completo (Entre el centro escolar y nuestro programa) durante TRES años ¿Qué consideras que deberías cambiar en tu rutina diaria para que tengas éxito?</label>
+    		<textarea class="form-control" rows="3" id="beca" placeholder="Escriba aquí su respuesta"></textarea>
+    		<p><i>(Por ejemplo dejar actividades de ocio como la iglesia, bandas estudiantiles, deportes, reuniones o paseos familiares)</i></p>
+ 		</div>
+	</div>
+</div>
+ 		<div class="input-group-append">
+ 				<button tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Enviar" data-content="Presione el botón para enviar su formulario" class="btn btn-outline-secondary" type="submit" onclick="validar()">Enviar</button>	
+ 		</div>
+</form>
+</div>
+
+	<br>
+	<div class="pie">
+	<footer align="center">
+		<br>
+		Todos los derechos reservados
+	</footer>
+	</div>
+<script src="popover.js"></script>
+</body>
+</html>

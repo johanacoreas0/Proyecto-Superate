@@ -1,0 +1,39 @@
+.boton {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 5;
+}
+
+.boton:hover{
+	color: white;
+	background-color: #71B046;
+	border-radius: 5px;
+}
+
+h1,h2{
+	color: #0489B1;
+	font-family: 'Arial';
+  font-size: 18px;
+}
+
+.separador{
+  height: 1px;
+  background-color: #088A29;
+}
+
+.titulo{
+  color:  #088A29;
+}
+
+.texto{
+  font-family: 'Times New Roman';
+  background-color: #084B8A;
+  color: white;
+}
+
+.pie{
+  color: white;
+  height: 50%;
+  background-color: #585858;
+}
